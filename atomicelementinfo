@@ -1,0 +1,134 @@
+elements_atomic_number = {
+    "Hydrogen": 1, "H": 1,
+    "Helium": 2, "He": 2,
+    "Lithium": 3, "Li": 3,
+    "Beryllium": 4, "Be": 4,
+    "Boron": 5, "B": 5,
+    "Carbon": 6, "C": 6,
+    "Nitrogen": 7, "N": 7,
+    "Oxygen": 8, "O": 8,
+    "Fluorine": 9, "F": 9,
+    "Neon": 10, "Ne": 10,
+    "Sodium": 11, "Na": 11,
+    "Magnesium": 12, "Mg": 12,
+    "Aluminum": 13, "Al": 13,
+    "Silicon": 14, "Si": 14,
+    "Phosphorus": 15, "P": 15,
+    "Sulfur": 16, "S": 16,
+    "Chlorine": 17, "Cl": 17,
+    "Argon": 18, "Ar": 18,
+    "Potassium": 19, "K": 19,
+    "Calcium": 20, "Ca": 20,
+    "Scandium": 21, "Sc": 21,
+    "Titanium": 22, "Ti": 22,
+    "Vanadium": 23, "V": 23,
+    "Chromium": 24, "Cr": 24,
+    "Manganese": 25, "Mn": 25,
+    "Iron": 26, "Fe": 26,
+    "Cobalt": 27, "Co": 27,
+    "Nickel": 28, "Ni": 28,
+    "Copper": 29, "Cu": 29,
+    "Zinc": 30, "Zn": 30,
+    "Gallium": 31, "Ga": 31,
+    "Germanium": 32, "Ge": 32,
+    "Arsenic": 33, "As": 33,
+    "Selenium": 34, "Se": 34,
+    "Bromine": 35, "Br": 35,
+    "Krypton": 36, "Kr": 36,
+    "Rubidium": 37, "Rb": 37,
+    "Strontium": 38, "Sr": 38,
+    "Yttrium": 39, "Y": 39,
+    "Zirconium": 40, "Zr": 40,
+    "Niobium": 41, "Nb": 41,
+    "Molybdenum": 42, "Mo": 42,
+    "Technetium": 43, "Tc": 43,
+    "Ruthenium": 44, "Ru": 44,
+    "Rhodium": 45, "Rh": 45,
+    "Palladium": 46, "Pd": 46,
+    "Silver": 47, "Ag": 47,
+    "Cadmium": 48, "Cd": 48,
+    "Indium": 49, "In": 49,
+    "Tin": 50, "Sn": 50,
+    "Antimony": 51, "Sb": 51,
+    "Tellurium": 52, "Te": 52,
+    "Iodine": 53, "I": 53,
+    "Xenon": 54, "Xe": 54,
+    "Cesium": 55, "Cs": 55
+}
+elements_mass_number = {
+    "Hydrogen": 1, "H": 1,
+    "Helium": 4, "He": 4,
+    "Lithium": 7, "Li": 7,
+    "Beryllium": 9, "Be": 9,
+    "Boron": 11, "B": 11,
+    "Carbon": 12, "C": 12,
+    "Nitrogen": 14, "N": 14,
+    "Oxygen": 16, "O": 16,
+    "Fluorine": 19, "F": 19,
+    "Neon": 20, "Ne": 20,
+    "Sodium": 23, "Na": 23,
+    "Magnesium": 24, "Mg": 24,
+    "Aluminum": 27, "Al": 27,
+    "Silicon": 28, "Si": 28,
+    "Phosphorus": 31, "P": 31,
+    "Sulfur": 32, "S": 32,
+    "Chlorine": 35, "Cl": 35,
+    "Argon": 40, "Ar": 40,
+    "Potassium": 39, "K": 39,
+    "Calcium": 40, "Ca": 40,
+    "Scandium": 45, "Sc": 45,
+    "Titanium": 48, "Ti": 48,
+    "Vanadium": 51, "V": 51,
+    "Chromium": 52, "Cr": 52,
+    "Manganese": 55, "Mn": 55,
+    "Iron": 56, "Fe": 56,
+    "Cobalt": 59, "Co": 59,
+    "Nickel": 58, "Ni": 58,
+    "Copper": 63, "Cu": 63,
+    "Zinc": 65, "Zn": 65,
+    "Gallium": 70, "Ga": 70,
+    "Germanium": 73, "Ge": 73,
+    "Arsenic": 75, "As": 75,
+    "Selenium": 79, "Se": 79,
+    "Bromine": 80, "Br": 80,
+    "Krypton": 84, "Kr": 84,
+    "Rubidium": 85, "Rb": 85,
+    "Strontium": 87, "Sr": 87,
+    "Yttrium": 89, "Y": 89,
+    "Zirconium": 91, "Zr": 91,
+    "Niobium": 93, "Nb": 93,
+    "Molybdenum": 96, "Mo": 96,
+    "Technetium": 98, "Tc": 98,
+    "Ruthenium": 101, "Ru": 101,
+    "Rhodium": 103, "Rh": 103,
+    "Palladium": 106, "Pd": 106,
+    "Silver": 108, "Ag": 108,
+    "Cadmium": 112, "Cd": 112,
+    "Indium": 115, "In": 115,
+    "Tin": 119, "Sn": 119,
+    "Antimony": 122, "Sb": 122,
+    "Tellurium": 128, "Te": 128,
+    "Iodine": 127, "I": 127,
+    "Xenon": 131, "Xe": 131,
+    "Cesium": 133, "Cs": 133
+}
+
+mass_number = {element: elements_mass_number[element] 
+                  for element in elements_mass_number}
+
+neutron_number = {element: elements_mass_number[element] - elements_atomic_number[element] 
+                  for element in elements_atomic_number}
+
+while True:
+    user_input = input("Enter element (or type 'quit' to exit): ")
+    
+    if user_input.lower() == "quit":
+        break
+    
+    if user_input in elements_atomic_number:
+        mass_count = mass_number[user_input]
+        atomic_number = elements_atomic_number[user_input]
+        neutron_count = neutron_number[user_input]  
+        print(f"{user_input} has mass number {mass_count}")
+        print(f"{user_input} has atomic number {atomic_number}")
+        print(f"{user_input} has neutron number {neutron_count}") 
